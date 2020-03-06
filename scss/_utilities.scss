@@ -1,0 +1,126 @@
+//container
+.container {
+  max-width: $max-width;
+  padding: 0 2rem;
+  overflow: hidden;
+  margin: auto auto;
+  margin-top: 6rem;
+}
+
+//text-styles
+.x-large {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.large {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.lead {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+//background
+.bg {
+  &-primary {
+    @include set-background($primary-color);
+  }
+  &-light {
+    @include set-background($light-color);
+  }
+  &-dark {
+    @include set-background($dark-color);
+  }
+  &-danger {
+    @include set-background($danger-color);
+  }
+  &-success {
+    @include set-background($primary-color);
+  }
+}
+
+.text-primary {
+  color: $primary-color;
+}
+
+//Buttons
+.btn {
+  display: inline-block;
+  background-color: $light-color;
+  color: $dark-color;
+  outline: none;
+  margin-right: 0.5rem;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  transition: all 0.2s ease-in;
+  border: None;
+
+  &-primary {
+    @include set-background($primary-color);
+    &:hover {
+      background: lighten($primary-color, 5%);
+    }
+  }
+  &-dark {
+    @include set-background($dark-color);
+    &:hover {
+      background: lighten($dark-color, 5%);
+    }
+  }
+  &-light {
+    @include set-background($light-color);
+    &:hover {
+      background: lighten($light-color, 5%);
+    }
+  }
+  &-success {
+    @include set-background($success-color);
+    &:hover {
+      background: lighten($success-color, 5%);
+    }
+  }
+  &-danger {
+    @include set-background($danger-color);
+    &:hover {
+      background: lighten($danger-color, 5%);
+    }
+  }
+}
+
+//Alert
+.alert {
+  padding: 0.8rem;
+  margin: 1rem;
+  opacity: 0.9;
+  background: $light-color;
+  color: #333;
+
+  &-primary {
+    @include set-background($primary-color);
+  }
+  &-light {
+    @include set-background($light-color);
+  }
+  &-dark {
+    @include set-background($dark-color);
+  }
+  &-success {
+    @include set-background($success-color);
+  }
+  &-danger {
+    @include set-background($danger-color);
+  }
+}
+
+.dark-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}

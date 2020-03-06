@@ -1,0 +1,46 @@
+$primary-color: #17a2b8;
+$dark-color: rgba(0, 0, 0, 0.856);
+$light-color: rgb(231, 239, 243);
+$danger-color: rgb(224, 60, 60);
+$success-color: rgb(93, 235, 93);
+$max-width: 1100px;
+
+//set color based on the background
+@function set-text-color($color) {
+  @if (lightness($color) > 60) {
+    @return #333;
+  } @else {
+    @return #fff;
+  }
+}
+
+//set background color
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-text-color($color);
+}
+
+//margin and padding class
+$SPACEAROUNDS: (1, 2, 3, 4, 5);
+
+@each $SPACE in $SPACEAROUNDS {
+  //all around margin
+  .m-#{$SPACE} {
+    margin: #{$SPACE}rem;
+  }
+
+  //all around padding
+  .p-#{$SPACE} {
+    padding: #{$SPACE}rem;
+  }
+
+  //vertical margin
+  .my-#{$SPACE} {
+    margin: #{$SPACE}rem 0;
+  }
+
+  //vertical padding
+  .py-#{$SPACE} {
+    margin: #{$SPACE}rem 0;
+  }
+}

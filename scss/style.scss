@@ -1,0 +1,79 @@
+@import "_config";
+@import "_utilities";
+@import "_form";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: None;
+}
+
+a {
+  text-decoration: None;
+}
+
+span {
+  font-family: "Raleway";
+}
+//navigation Bar
+.navbar {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0rem 1rem;
+  z-index: 1;
+  border-bottom: 1px solid $primary-color;
+  width: 100%;
+  //background-color: $primary-color;
+  opacity: 0.9;
+
+  a {
+    color: #fff;
+    &:hover {
+      color: $primary-color;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+  }
+  li {
+    padding: 1rem;
+    width: 8rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+//landing home page
+.landing {
+  position: relative;
+  background: url("../img/person-plugging-audio-cable-3531847.jpg") no-repeat
+    center center/cover;
+  height: 100vh;
+  object-fit: cover;
+
+  &-inner {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+}
