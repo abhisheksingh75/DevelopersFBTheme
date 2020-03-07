@@ -1,10 +1,10 @@
 //container
 .container {
-  max-width: $max-width;
+  max-width: 100%;
   padding: 0 2rem;
   overflow: hidden;
-  margin: auto auto;
   margin-top: 6rem;
+  width: 100%;
 }
 
 //text-styles
@@ -43,13 +43,15 @@
   }
 }
 
-.text-primary {
-  color: $primary-color;
+.text {
+  &-primary {
+    color: $primary-color;
+  }
 }
 
 //Buttons
 .btn {
-  display: inline-block;
+  display: inline;
   background-color: $light-color;
   color: $dark-color;
   outline: none;
@@ -58,6 +60,7 @@
   font-size: 1rem;
   transition: all 0.2s ease-in;
   border: None;
+  font-family: Raleway;
 
   &-primary {
     @include set-background($primary-color);
@@ -89,6 +92,12 @@
       background: lighten($danger-color, 5%);
     }
   }
+  &-grey {
+    @include set-background($grey-color);
+    &:hover {
+      background: lighten($grey-color, 5%);
+    }
+  }
 }
 
 //Alert
@@ -116,6 +125,35 @@
   }
 }
 
+//Badges
+.badge {
+  font-size: 0.8rem;
+  padding: 0.1rem;
+  margin: 0.1rem;
+  text-align: center;
+  background: $grey-color;
+  color: #333;
+  &-primary {
+    @include set-background($primary-color);
+  }
+  &-light {
+    @include set-background($light-color);
+  }
+  &-dark {
+    @include set-background($dark-color);
+  }
+  &-success {
+    @include set-background($success-color);
+  }
+  &-danger {
+    @include set-background($danger-color);
+  }
+}
+
+.round-image {
+  border-radius: 50%;
+}
+
 .dark-overlay {
   position: absolute;
   width: 100%;
@@ -123,4 +161,22 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.line {
+  height: 1px;
+  background: $grey-color;
+  margin: 1.4rem 0;
+}
+
+.table {
+  width: 90%;
+  th,
+  td {
+    padding: 1rem;
+    text-align: left;
+  }
+  th {
+    background-color: $light-color;
+  }
 }

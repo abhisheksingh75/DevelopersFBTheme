@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/0c68b254c8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/style.min.css" rel="stylesheet" />
+    <title>welcome to the DevFB</title>
+  </head>
+  <body>
+    <nav class="navbar bg-dark">
+      <h1>
+        <a href="dashboard.html">
+          <i class="fas fa-code"><span>DevFB</span></i>
+        </a>
+      </h1>
+      <ul>
+        <li><a href="profiles.html">Developers</a></li>
+        <li><a href="posts.html">Posts</a></li>
+        <li>
+          <a
+            href="dashboard.html"
+            style="display:flex;align-items: center;text-align:center;"
+          >
+            <i class="fas fa-user"></i>
+            <span class="hide-sm">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="login.html"
+            style="display:flex;align-items: center;text-align:center;"
+          >
+            <i class="fas fa-sign-out-alt"></i>
+            <span class="hide-sm">login</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <section class="container">
+      <h1 class="large text-primary">
+        Dashboard
+      </h1>
+      <p class="class"><i class="fas fa-user"> Welcome Steve smith</i></p>
+      <div class="dash-buttons">
+        <a href="create-profile.html" class="btn">
+          <i class="fas fa-user-circle text-primary"></i> Edit Profile
+        </a>
+        <a href="add-experience.html" class="btn">
+          <i class="fab fa-black-tie text-primary"></i> Add Experience
+        </a>
+        <a href="add-education.html " class="btn">
+          <i class="fas fa-graduation-cap text-primary"></i> Add Education
+        </a>
+      </div>
+      <!-- Experience -->
+      <h2 class="my-2">
+        Experience Cridentials
+      </h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th class="hide-sm">Title</th>
+            <th class="hide-sm">Years</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Microsoft</td>
+            <td class="hide-sm">Senior Developer</td>
+            <td class="hide-sm">Oct 2011 - Present</td>
+            <td><a href="" class="btn btn-danger">Delete</a></td>
+          </tr>
+          <tr>
+            <td>Twitter</td>
+            <td class="hide-sm  ">Developer</td>
+            <td class="hide-sm">Oct 2010 - Oct 2011</td>
+            <td><a href="" class="btn btn-danger">Delete</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="my-2">
+        Education Cridentials
+      </h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>School</th>
+            <th class="hide-sm">Degree</th>
+            <th class="hide-sm">Years</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>University of Washington</td>
+            <td class="hide-sm">Masters</td>
+            <td class="hide-sm">Oct 1999 - jul 2001</td>
+            <td><a href="" class="btn btn-danger">Delete</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="my-2">
+        <a href="" class="btn btn-danger">
+          <i class="fas fa-user-minus"></i>
+          Delete Account
+        </a>
+      </div>
+    </section>
+  </body>
+</html>

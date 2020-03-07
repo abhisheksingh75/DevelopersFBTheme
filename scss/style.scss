@@ -21,6 +21,9 @@ a {
   text-decoration: None;
 }
 
+button {
+  text-decoration: None;
+}
 span {
   font-family: "Raleway";
 }
@@ -47,13 +50,14 @@ span {
   }
   ul {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
   }
   li {
     padding: 1rem;
     width: 8rem;
+    text-align: center;
     &:hover {
       text-decoration: underline;
     }
@@ -74,6 +78,114 @@ span {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     height: 100vh;
   }
 }
+
+//profile page
+.profile {
+  display: grid;
+  grid-template-columns: 2fr 4fr 2fr;
+  padding: 1rem;
+  grid-gap: 2rem;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-areas:
+    "top top"
+    "about about"
+    "exp edu"
+    "github github";
+  grid-gap: 1rem;
+  .profile-top {
+    grid-area: top;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .icons > a {
+      color: $light-color;
+      margin: 0 0.4rem;
+      &:hover {
+        color: $dark-color;
+      }
+    }
+  }
+  .profile-about {
+    grid-area: about;
+    text-align: center;
+    padding: 1rem 2rem;
+    .skills {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+    }
+  }
+  .profile-experience {
+    grid-area: exp;
+  }
+  .profile-edu {
+    grid-area: edu;
+  }
+
+  .profile-experience,
+  .profile-edu {
+    & > div {
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 0.2rem dotted $grey-color;
+      &:last-child {
+        border: None;
+      }
+    }
+  }
+  .profile-github {
+    grid-area: github;
+    .repo {
+      display: flex;
+      & > div:first-child {
+        flex: 7;
+        flex-basis: 70%;
+      }
+      & > div:last-child {
+        flex: 3;
+        flex-basis: 20%;
+      }
+    }
+  }
+}
+
+//post page
+.post {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 2rem;
+  align-items: center;
+
+  & > div:first-child {
+    text-align: center;
+  }
+  .img {
+    width: 150px;
+  }
+}
+.devloper-profile {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-gap: 2rem;
+  align-items: center;
+
+  & > div {
+    &:first-child {
+      text-align: center;
+    }
+  }
+}
+
+@import "_mobile";
